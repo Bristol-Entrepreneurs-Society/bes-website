@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BES Website - Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E11D48',
+                        ink: '#0F172A',
+                        slate: {
+                            light: '#64748B',
+                            DEFAULT: '#334155',
+                        },
+                        accent: '#22D3EE',
+                        background: '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-20 h-20 rounded-full bg-primary mx-auto mb-6"></div>
+            <h1 class="text-4xl font-bold text-ink mb-4">BES Website</h1>
+            <p class="text-xl text-slate-600 mb-8">Project structure created successfully!</p>
+            <div class="space-y-4">
+                <div class="p-4 bg-white rounded-2xl shadow-soft">
+                    <h2 class="font-semibold text-ink mb-2">✅ Project Structure</h2>
+                    <p class="text-sm text-slate-600">All pages and components created</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl shadow-soft">
+                    <h2 class="font-semibold text-ink mb-2">⚠️ Dependencies</h2>
+                    <p class="text-sm text-slate-600">npm install issue detected - manual installation required</p>
+                </div>
+                <div class="p-4 bg-white rounded-2xl shadow-soft">
+                    <h2 class="font-semibold text-ink mb-2">📋 Next Steps</h2>
+                    <p class="text-sm text-slate-600">Install dependencies manually and run npm run dev</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
