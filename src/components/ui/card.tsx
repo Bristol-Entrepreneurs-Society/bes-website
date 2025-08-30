@@ -10,8 +10,8 @@ interface CardProps {
 
 export function Card({ children, className, as: Component = 'div', href }: CardProps) {
   const baseClasses = cn(
-    'group relative overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-200',
-    'hover:shadow-medium hover:-translate-y-1',
+    'group relative overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 ease-in-out',
+    'hover:shadow-medium hover:-translate-y-1 hover:scale-[1.02]',
     className
   )
 
@@ -20,8 +20,9 @@ export function Card({ children, className, as: Component = 'div', href }: CardP
       <motion.a
         href={href}
         className={baseClasses}
-        whileHover={{ y: -4 }}
+        whileHover={{ y: -4, scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
       >
         {children}
       </motion.a>
@@ -31,8 +32,9 @@ export function Card({ children, className, as: Component = 'div', href }: CardP
   return (
     <motion.div
       className={baseClasses}
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -4, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       {children}
     </motion.div>

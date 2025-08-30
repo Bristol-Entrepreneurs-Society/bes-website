@@ -1,0 +1,12 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ship hull -->
+  <path d="M8 28L12 24H28L32 28H8Z" fill="#dc2626"/>
+  <!-- Ship body -->
+  <path d="M12 24L16 16H24L28 24H12Z" fill="#dc2626"/>
+  <!-- Mast -->
+  <rect x="19" y="8" width="2" height="8" fill="#dc2626"/>
+  <!-- Sail -->
+  <path d="M21 8L25 12L21 16L21 8Z" fill="#dc2626" opacity="0.8"/>
+  <!-- BES text -->
+  <text x="20" y="36" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="bold" fill="#dc2626">BES</text>
+</svg>

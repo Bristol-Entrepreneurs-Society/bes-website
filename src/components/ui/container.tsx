@@ -8,8 +8,11 @@ interface ContainerProps {
 
 export function Container({ children, className, as: Component = 'div' }: ContainerProps) {
   return (
-    <Component className={cn('mx-auto max-w-7xl px-4 sm:px-6 lg:px-8', className)}>
+    <Component className={cn('mx-auto max-w-7xl container-padding', className)}>
       {children}
     </Component>
   )
 } 
+export function Section({ children }: { children: React.ReactNode }) {
+  return <section className="mx-auto max-w-7xl container-padding">{children}</section>
+}

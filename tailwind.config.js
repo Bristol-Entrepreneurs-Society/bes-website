@@ -9,31 +9,52 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#E11D48', // rose-600
-          dark: '#BE123C', // rose-700
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#ef4444',
+          600: '#dc2626', // Main BES red
+          700: '#b91c1c',
+          800: '#991b1b',
+          900: '#7f1d1d',
+          DEFAULT: '#dc2626',
+          dark: '#b91c1c',
         },
-        ink: '#0F172A', // slate-900
-        slate: {
-          light: '#64748B', // slate-500
-          DEFAULT: '#334155', // slate-700
+        neutral: {
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
         },
-        accent: '#22D3EE', // cyan-400
-        background: '#F8FAFC', // slate-50
+        background: '#ffffff',
+        surface: '#fafafa',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         '2xl': '1rem',
+        '3xl': '1.5rem',
       },
       boxShadow: {
-        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'medium': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'soft': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        'medium': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'large': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
-        'lift': 'lift 0.2s ease-out',
+        'lift': 'lift 0.3s ease-out',
+        'scale': 'scale 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -48,6 +69,15 @@ module.exports = {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-4px)' },
         },
+        scale: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.02)' },
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-red-white': 'linear-gradient(135deg, #dc2626 0%, #ffffff 100%)',
+        'gradient-light-red': 'linear-gradient(135deg, #fef2f2 0%, #ffffff 100%)',
       },
     },
   },
