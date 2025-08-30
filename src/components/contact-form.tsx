@@ -106,10 +106,10 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="p-8">
+    <Card className="p-8 bg-white border border-neutral-100">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-ink mb-2">Get in Touch</h2>
-        <p className="text-slate-600">
+        <h2 className="text-3xl font-bold text-neutral-900 mb-2">Get in Touch</h2>
+        <p className="text-neutral-600">
           Have a question or want to get involved? We'd love to hear from you!
         </p>
       </div>
@@ -118,18 +118,18 @@ export function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
               Name *
             </label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
+              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
               <input
                 type="text"
                 id="name"
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
-                className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent ${
-                  errors.name ? 'border-red-300' : 'border-slate-300'
+                className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out ${
+                  errors.name ? 'border-red-300' : 'border-neutral-300'
                 }`}
                 placeholder="Your full name"
               />
@@ -144,18 +144,18 @@ export function ContactForm() {
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
               Email *
             </label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
               <input
                 type="email"
                 id="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent ${
-                  errors.email ? 'border-red-300' : 'border-slate-300'
+                className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out ${
+                  errors.email ? 'border-red-300' : 'border-neutral-300'
                 }`}
                 placeholder="your.email@example.com"
               />
@@ -171,17 +171,17 @@ export function ContactForm() {
 
         {/* Company/Role */}
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2">
             Company/Role (Optional)
           </label>
           <div className="relative">
-            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
+            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
             <input
               type="text"
               id="company"
               value={formData.company}
               onChange={(e) => handleInputChange('company', e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-neutral-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out"
               placeholder="Your company or role"
             />
           </div>
@@ -189,15 +189,15 @@ export function ContactForm() {
 
         {/* Reason */}
         <div>
-          <label htmlFor="reason" className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="reason" className="block text-sm font-medium text-neutral-700 mb-2">
             Reason for Contacting Us *
           </label>
           <select
             id="reason"
             value={formData.reason}
             onChange={(e) => handleInputChange('reason', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent ${
-              errors.reason ? 'border-red-300' : 'border-slate-300'
+            className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out ${
+              errors.reason ? 'border-red-300' : 'border-neutral-300'
             }`}
           >
             <option value="">Select a reason</option>
@@ -217,18 +217,18 @@ export function ContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
             Message *
           </label>
           <div className="relative">
-            <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-slate-400" />
+            <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-neutral-400" />
             <textarea
               id="message"
               rows={5}
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
-              className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent ${
-                errors.message ? 'border-red-300' : 'border-slate-300'
+              className={`w-full pl-10 pr-4 py-3 border rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out ${
+                errors.message ? 'border-red-300' : 'border-neutral-300'
               }`}
               placeholder="Tell us more about your inquiry..."
             />
