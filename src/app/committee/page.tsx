@@ -127,8 +127,7 @@ export default function CommitteePage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Passionate students dedicated to building Bristol's premier entrepreneurship community. 
-                We're here to create opportunities, foster connections, and support your entrepreneurial journey.
+                We're committed to our mission: promoting our message that anyone can be an entrepreneur.
               </p>
             </motion.div>
           </motion.div>

@@ -16,9 +16,9 @@ export const committee: CommitteeMember[] = [
     role: 'President',
     image: '/committee/scott-sampson.jpg',
     linkedin: 'https://linkedin.com/in/scottsampson',
-    bio: 'Leading BES with a vision to create the premier entrepreneurship community at Bristol.',
-    year: '3rd Year',
-    course: 'BSc Business Management',
+    bio: 'Co-leading BES with a vision to create the premier entrepreneurship community at Bristol.',
+    year: '4th Year',
+    course: 'Economics & Management (Study Abroad)',
   },
   {
     id: '2',
@@ -28,7 +28,7 @@ export const committee: CommitteeMember[] = [
     linkedin: 'https://linkedin.com/in/reeceforbes',
     bio: 'Co-leading BES with a focus on building meaningful connections and opportunities for student entrepreneurs.',
     year: '3rd Year',
-    course: 'BSc Economics',
+    course: 'Economics',
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ export const committee: CommitteeMember[] = [
     linkedin: 'https://linkedin.com/in/neelbhatia',
     bio: 'Supporting the presidents in driving BES forward and creating impactful experiences for members.',
     year: '3rd Year',
-    course: 'BSc Computer Science',
+    course: 'Economics & Management',
   },
   {
     id: '4',
@@ -48,7 +48,7 @@ export const committee: CommitteeMember[] = [
     linkedin: 'https://linkedin.com/in/kellywu',
     bio: 'Managing BES finances and ensuring sustainable growth for our expanding community.',
     year: '2nd Year',
-    course: 'BSc Accounting and Finance',
+    course: 'Accounting & Finance',
   },
   {
     id: '5',
@@ -57,8 +57,8 @@ export const committee: CommitteeMember[] = [
     image: '/committee/igor-janiga.jpg',
     linkedin: 'https://linkedin.com/in/igorjaniga',
     bio: 'Keeping BES organized and ensuring smooth operations across all our activities.',
-    year: '2nd Year',
-    course: 'BSc Business Management',
+    year: '4th Year',
+    course: 'LLB Law & French',
   },
   {
     id: '6',
@@ -68,7 +68,7 @@ export const committee: CommitteeMember[] = [
     linkedin: 'https://linkedin.com/in/jiayicheng',
     bio: 'Championing diversity, equity, and inclusion to make BES welcoming for all students.',
     year: '3rd Year',
-    course: 'BSc Psychology',
+    course: 'Education Studies',
   },
   {
     id: '7',
@@ -77,8 +77,8 @@ export const committee: CommitteeMember[] = [
     image: '/committee/maya-hoch.jpg',
     linkedin: 'https://linkedin.com/in/mayahoch',
     bio: 'Building connections with the wider Bristol entrepreneurship ecosystem and beyond.',
-    year: '2nd Year',
-    course: 'BSc International Relations',
+    year: '1st Year',
+    course: 'Politics & International Relations',
   },
   {
     id: '8',
@@ -87,8 +87,8 @@ export const committee: CommitteeMember[] = [
     image: '/committee/harri-smith.jpg',
     linkedin: 'https://linkedin.com/in/harrismith',
     bio: 'Creating unforgettable events that inspire, educate, and connect our entrepreneurial community.',
-    year: '2nd Year',
-    course: 'BSc Event Management',
+    year: 'TBC',
+    course: 'Details TBC',
   },
   {
     id: '9',
@@ -97,7 +97,7 @@ export const committee: CommitteeMember[] = [
     image: '/committee/eldylea-izzaiddean.jpg',
     linkedin: 'https://linkedin.com/in/eldyleaizzaiddean',
     bio: 'Spreading the word about BES and building our brand across the university and beyond.',
-    year: '2nd Year',
-    course: 'BSc Marketing',
+    year: '3rd Year',
+    course: 'Finance',
   },
 ] 
