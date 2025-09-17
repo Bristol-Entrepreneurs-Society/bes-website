@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -51,11 +52,15 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
             >
               <Link href="/" className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-red-600 shadow-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">B</span>
-                  </div>
-                  <div className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 animate-pulse"></div>
+                <div className="relative shrink-0">
+                  <Image
+                    src="/bes-logo.png"
+                    alt="BES logo"
+                    width={40}
+                    height={40}
+                    priority
+                    className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
+                  />
                 </div>
                 <div className="hidden sm:block">
                   <span className="text-xl font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
