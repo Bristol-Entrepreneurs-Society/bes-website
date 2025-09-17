@@ -38,22 +38,42 @@ const galleryImages = [
   {
     id: '2',
     src: '/PHOTO-2025-09-16-20-16-27.jpg',
-    alt: 'BES Event - Speaker Presentation',
+    alt: 'BES Event - Brand Positioning Presentation',
   },
   {
     id: '3',
     src: '/PHOTO-2025-09-16-20-16-29.jpg',
-    alt: 'BES Event - Networking Session',
+    alt: 'BES Event - Networking and Discussion',
   },
   {
     id: '4',
-    src: '/PHOTO-2025-09-16-20-16-29.jpg',
-    alt: 'BES Event - Team Presentation',
+    src: '/PHOTO-2025-09-16-20-16-30.jpg',
+    alt: 'BES Event - Alacrity Presentation',
   },
   {
     id: '5',
-    src: '/PHOTO-2025-09-16-20-16-26.jpg',
+    src: '/IMG_6761.jpg',
+    alt: 'BES Event - Society Fair and Outreach',
+  },
+  {
+    id: '6',
+    src: '/IMG_6761.jpg',
+    alt: 'BES Event - Networking Session',
+  },
+  {
+    id: '7',
+    src: '/PHOTO-2025-09-16-20-16-30.jpg',
+    alt: 'BES Event - Team Building Activity',
+  },
+  {
+    id: '8',
+    src: '/PHOTO-2025-09-16-20-16-27.jpg',
     alt: 'BES Event - Society Fair',
+  },
+  {
+    id: '9',
+    src: '/PHOTO-2025-09-16-20-16-29.jpg',
+    alt: 'BES Event - Outdoor Team Activity',
   },
 ]
 
