@@ -10,8 +10,6 @@ const quickLinks = [
   { name: 'Events', href: '/events' },
   { name: 'Committee', href: '/committee' },
   { name: 'Gallery', href: '/gallery' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Partners', href: '/partners' },
   { name: 'Contact', href: '/contact' },
 ]
 
