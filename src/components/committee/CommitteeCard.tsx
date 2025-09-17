@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Linkedin, User } from 'lucide-react'
@@ -35,21 +36,23 @@ export function CommitteeCard({ member, index }: CommitteeCardProps) {
     >
       <Card className="h-full overflow-hidden bg-white border border-neutral-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
         {/* Profile Image or Initials */}
-        <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200">
+        <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200 flex items-center justify-center">
           {!imageError ? (
-            <img
-              src={member.image}
-              alt={`${member.name} - ${member.role}`}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              onError={() => setImageError(true)}
-            />
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-40 lg:h-40">
+              <Image
+                src={member.image}
+                alt={`${member.name} - ${member.role}`}
+                fill
+                className="rounded-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={() => setImageError(true)}
+                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 144px, 160px"
+              />
+            </div>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-red-600/10">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-red-600 flex items-center justify-center shadow-lg">
-                <span className="text-2xl font-bold text-white">
-                  {getInitials(member.name)}
-                </span>
-              </div>
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-red-600 flex items-center justify-center shadow-lg">
+              <span className="text-2xl font-bold text-white">
+                {getInitials(member.name)}
+              </span>
             </div>
           )}
           
