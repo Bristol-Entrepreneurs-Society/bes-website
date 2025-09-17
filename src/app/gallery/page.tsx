@@ -55,6 +55,31 @@ const galleryImages = [
     src: '/Unknown-1.jpeg',
     alt: 'BES Event - Outdoor Networking Event',
   },
+  {
+    id: '6',
+    src: '/Unknown-2.jpeg',
+    alt: 'BES Event - Team Celebration with Tilt Banner',
+  },
+  {
+    id: '7',
+    src: '/PHOTO-2025-09-16-20-16-28.jpg',
+    alt: 'BES Event - Award Ceremony',
+  },
+  {
+    id: '8',
+    src: '/PHOTO-2025-09-16-20-16-27.jpg',
+    alt: 'BES Event - Digital Marketing Workshop',
+  },
+  {
+    id: '9',
+    src: '/PHOTO-2025-09-16-20-16-29.jpg',
+    alt: 'BES Event - Lecture Hall Presentation',
+  },
+  {
+    id: '10',
+    src: '/Unknown-3.jpeg',
+    alt: 'BES Event - Society Fair Booth',
+  },
 ]
 
 export default function GalleryPage() {
