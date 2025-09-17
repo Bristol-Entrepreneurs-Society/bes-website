@@ -94,6 +94,7 @@ export const committee: CommitteeMember[] = [
     name: 'Eldylea Izzaiddean',
     role: 'Marketing Officer',
     image: '/committee/eldylea-izzaiddean.jpg',
+    linkedin: 'https://www.linkedin.com/in/eldylea/',
     bio: 'Spreading the word about BES and building our brand across the university and beyond.',
     year: '3rd Year',
     course: 'Finance',
