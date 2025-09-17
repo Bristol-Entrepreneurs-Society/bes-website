@@ -80,6 +80,26 @@ const galleryImages = [
     src: '/Unknown-3.jpeg',
     alt: 'BES Event - Society Fair Booth',
   },
+  {
+    id: '11',
+    src: '/PHOTO-2025-09-16-20-16-25.jpg',
+    alt: 'BES Event - Startup Presentation with QR Code',
+  },
+  {
+    id: '12',
+    src: '/PHOTO-2025-09-16-20-16-28 copy.jpg',
+    alt: 'BES Event - Social Gathering and Networking',
+  },
+  {
+    id: '13',
+    src: '/Unknown-4.jpeg',
+    alt: 'BES Event - Pub Social and Networking',
+  },
+  {
+    id: '14',
+    src: '/PHOTO-2025-09-16-20-16-27 copy.jpg',
+    alt: 'BES Event - Networking Session with Photography',
+  },
 ]
 
 export default function GalleryPage() {
