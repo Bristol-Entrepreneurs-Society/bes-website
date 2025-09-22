@@ -233,27 +233,93 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-50 to-white"></div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23E11D48%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        
+        {/* Floating geometric elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute top-10 left-10 w-20 h-20 rounded-full bg-gradient-to-br from-primary/5 to-red-600/5 blur-xl"
+            animate={{
+              y: [0, -15, 0],
+              x: [0, 10, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-10 w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400/5 to-blue-500/5 blur-lg"
+            animate={{
+              y: [0, 20, 0],
+              x: [0, -10, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-2 gap-8"
+            className="text-center mb-12"
+          >
+            <motion.div variants={itemVariants}>
+              <Badge variant="secondary" className="mb-4">Our Impact</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+                Building Bristol's{' '}
+                <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Entrepreneurial Community
+                </span>
+              </h2>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 variants={itemVariants}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-red-600/10 mb-4">
-                  <stat.icon className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-2">{stat.number}</div>
-                <div className="text-neutral-600 font-medium">{stat.label}</div>
+                <motion.div 
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-primary/10 to-red-600/10 mb-6 group-hover:scale-110 transition-transform duration-300"
+                  whileHover={{ rotate: 5 }}
+                >
+                  <stat.icon className="h-10 w-10 text-primary" />
+                </motion.div>
+                <motion.div 
+                  className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-3"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.8, 
+                    delay: index * 0.2,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                >
+                  {stat.number}
+                </motion.div>
+                <div className="text-lg text-neutral-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

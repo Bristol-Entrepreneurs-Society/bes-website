@@ -26,12 +26,6 @@ const socialLinks = [
     icon: Instagram,
     color: 'hover:text-pink-600',
   },
-  {
-    name: 'Email',
-    href: 'mailto:hello@besbristol.com',
-    icon: Mail,
-    color: 'hover:text-primary',
-  },
 ]
 
 const containerVariants = {
@@ -168,15 +162,6 @@ export function Footer() {
                     <p>Bristol, BS8 1TH</p>
                     <p>United Kingdom</p>
                   </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                  <a
-                    href="mailto:hello@besbristol.com"
-                    className="text-neutral-300 hover:text-white transition-colors"
-                  >
-                    hello@besbristol.com
-                  </a>
                 </div>
               </div>
             </motion.div>

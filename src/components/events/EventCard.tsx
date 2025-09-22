@@ -57,12 +57,20 @@ export function EventCard({ event, index }: EventCardProps) {
 
           {/* Date Badge */}
           <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-lg">
-            <div className="text-xs font-medium text-neutral-600">
-              {new Date(event.date).toLocaleDateString('en-GB', { month: 'short' })}
-            </div>
-            <div className="text-lg font-bold text-neutral-900">
-              {new Date(event.date).getDate()}
-            </div>
+            {event.date === 'TBD' ? (
+              <div className="text-xs font-medium text-neutral-600">
+                TBD
+              </div>
+            ) : (
+              <>
+                <div className="text-xs font-medium text-neutral-600">
+                  {new Date(event.date).toLocaleDateString('en-GB', { month: 'short' })}
+                </div>
+                <div className="text-lg font-bold text-neutral-900">
+                  {new Date(event.date).getDate()}
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -92,7 +100,7 @@ export function EventCard({ event, index }: EventCardProps) {
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-sm text-neutral-600">
                 <Calendar className="h-4 w-4" />
-                <span>{formatDate(event.date)}</span>
+                <span>{event.date === 'TBD' ? 'TBD' : formatDate(event.date)}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-600">
                 <Clock className="h-4 w-4" />

@@ -38,15 +38,18 @@ export function CommitteeCard({ member, index }: CommitteeCardProps) {
         {/* Profile Image or Initials */}
         <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200 flex items-center justify-center">
           {/* Subtle geometric background */}
-          <div className="pointer-events-none absolute inset-0 -z-0 opacity-30">
+          <div className="pointer-events-none absolute inset-0 -z-0">
             {/* soft circles */}
-            <div className="absolute -top-4 -left-6 w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-white/10 blur-md motion-safe:animate-float" />
-            <div className="absolute bottom-0 right-4 w-16 h-16 rounded-full bg-gradient-to-br from-white/20 to-primary/10 blur motion-safe:animate-float" style={{ animationDelay: '0.8s' }} />
+            <div className="absolute -top-4 -left-6 w-24 h-24 rounded-full bg-[#E63946]/10 blur-sm motion-safe:animate-[float_6s_ease-in-out_infinite]" />
+            <div className="absolute bottom-2 right-4 w-16 h-16 rounded-full bg-white/10 blur motion-safe:animate-[float_6s_ease-in-out_infinite]" style={{ animationDelay: '0.8s' }} />
             {/* diagonal line */}
-            <div className="absolute left-4 top-1/2 w-32 h-px bg-white/30 rotate-12 motion-safe:animate-float" style={{ animationDelay: '1.2s' }} />
-            {/* hexagon outline */}
-            <svg className="absolute top-6 right-6 w-14 h-14 motion-safe:animate-float" viewBox="0 0 100 100" fill="none" style={{ animationDelay: '0.4s' }}>
-              <path d="M50 5 L90 30 L90 70 L50 95 L10 70 L10 30 Z" stroke="white" strokeOpacity="0.35" strokeWidth="3" />
+            <div className="absolute left-4 top-1/2 w-32 h-px bg-white/10 rotate-12 motion-safe:animate-[float_6s_ease-in-out_infinite]" style={{ animationDelay: '1.2s' }} />
+            {/* hexagon outlines */}
+            <svg className="absolute top-6 right-6 w-14 h-14 motion-safe:animate-[float_6s_ease-in-out_infinite]" viewBox="0 0 100 100" fill="none" style={{ animationDelay: '0.4s' }}>
+              <path d="M50 5 L90 30 L90 70 L50 95 L10 70 L10 30 Z" stroke="white" strokeOpacity="0.08" strokeWidth="3" />
+            </svg>
+            <svg className="absolute bottom-6 left-8 w-10 h-10 motion-safe:animate-[float_6s_ease-in-out_infinite]" viewBox="0 0 100 100" fill="none" style={{ animationDelay: '1.6s' }}>
+              <path d="M50 8 L86 30 L86 70 L50 92 L14 70 L14 30 Z" stroke="#E63946" strokeOpacity="0.1" strokeWidth="2" />
             </svg>
           </div>
           {!imageError ? (

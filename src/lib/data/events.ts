@@ -21,7 +21,7 @@ export const events: Event[] = [
   {
     id: '1',
     title: 'Building with Elite Athletes',
-    date: '2024-12-15',
+    date: '2025-10-16',
     time: '18:00',
     location: 'Bristol Business School',
     description: 'Ash Phillips on sports entrepreneurship: real stories, practical lessons, and candid Q&A.',
@@ -37,7 +37,7 @@ export const events: Event[] = [
   {
     id: '2',
     title: 'From Engineering to £5M+ Revenue',
-    date: '2024-12-20',
+    date: 'TBD',
     time: '19:00',
     location: 'Innovation Lab',
     description: 'Jan & Ali Yousef on scaling from code to company—tactics, growth, and lessons learned.',
@@ -51,7 +51,7 @@ export const events: Event[] = [
   {
     id: '3',
     title: 'Consulting Mindset for Startups',
-    date: '2024-12-18',
+    date: '2025-11-13',
     time: '17:30',
     location: 'Bristol Business School',
     description: 'Apply consulting frameworks to real startup problems. Hands-on and highly actionable.',
@@ -65,15 +65,15 @@ export const events: Event[] = [
   {
     id: '4',
     title: 'Zero to One as a Founder',
-    date: '2024-12-22',
+    date: '2025-11-20',
     time: '18:30',
     location: 'Lecture Theatre 1',
     description: 'Paul Dodd on going from idea to launch—hard lessons and practical frameworks.',
     image: '/events/huboo_fulfilment_logo.jpg',
     alt: 'Paul Dodd zero to one founder talk',
-    imageFit: 'contain',
+    imageFit: 'cover',
     imagePosition: 'center',
-    imagePadding: 'p-6',
+    imagePadding: '',
     isUpcoming: true,
     category: 'talks',
     speaker: 'Paul Dodd',
@@ -84,7 +84,7 @@ export const events: Event[] = [
   {
     id: '5',
     title: 'Pitch Like a Pro',
-    date: '2024-12-12',
+    date: '2025-11-13',
     time: '14:00',
     location: 'Innovation Lab',
     description: 'Hands-on pitch workshop with live teardowns and actionable feedback.',
@@ -98,7 +98,7 @@ export const events: Event[] = [
   {
     id: '6',
     title: 'How to Start a Business at Uni',
-    date: '2024-12-14',
+    date: 'TBD',
     time: '15:00',
     location: 'Bristol Business School',
     description: 'Idea validation, MVPs, and co-founders—how to start while at university.',
@@ -110,7 +110,7 @@ export const events: Event[] = [
   {
     id: '7',
     title: 'How to Pitch to Investors',
-    date: '2024-12-16',
+    date: 'TBD',
     time: '16:00',
     location: 'Innovation Lab',
     description: 'What angels and VCs expect—craft a compelling investor pitch and avoid pitfalls.',
@@ -124,7 +124,7 @@ export const events: Event[] = [
   {
     id: '8',
     title: 'Run a Top-Tier Student Society',
-    date: '2024-12-19',
+    date: 'TBD',
     time: '17:00',
     location: 'Bristol SU',
     description: 'Operations, partnerships, and growth strategies for standout student societies.',
@@ -136,7 +136,7 @@ export const events: Event[] = [
   {
     id: '9',
     title: 'Don\'t Get Bullied by Landlords',
-    date: '2024-12-21',
+    date: 'TBD',
     time: '13:00',
     location: 'Bristol SU',
     description: 'Know your housing rights and protect yourself from unfair landlord practices.',
@@ -150,7 +150,7 @@ export const events: Event[] = [
   {
     id: '10',
     title: 'Founder & Builder Mixer',
-    date: '2024-12-25',
+    date: '2025-12-04',
     time: '19:00',
     location: 'The Berkeley Square',
     description: 'Relaxed networking for founders and builders—meet peers and make connections.',
@@ -162,7 +162,7 @@ export const events: Event[] = [
   {
     id: '11',
     title: 'Tech & Product Night',
-    date: '2024-12-28',
+    date: 'TBD',
     time: '18:30',
     location: 'Innovation Hub',
     description: 'Meet engineers, PMs, and designers from Bristol\'s tech scene—great for builders.',
