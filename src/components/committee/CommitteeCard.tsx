@@ -37,8 +37,20 @@ export function CommitteeCard({ member, index }: CommitteeCardProps) {
       <Card className="h-full overflow-hidden bg-white border border-neutral-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
         {/* Profile Image or Initials */}
         <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200 flex items-center justify-center">
+          {/* Subtle geometric background */}
+          <div className="pointer-events-none absolute inset-0 -z-0 opacity-30">
+            {/* soft circles */}
+            <div className="absolute -top-4 -left-6 w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-white/10 blur-md motion-safe:animate-float" />
+            <div className="absolute bottom-0 right-4 w-16 h-16 rounded-full bg-gradient-to-br from-white/20 to-primary/10 blur motion-safe:animate-float" style={{ animationDelay: '0.8s' }} />
+            {/* diagonal line */}
+            <div className="absolute left-4 top-1/2 w-32 h-px bg-white/30 rotate-12 motion-safe:animate-float" style={{ animationDelay: '1.2s' }} />
+            {/* hexagon outline */}
+            <svg className="absolute top-6 right-6 w-14 h-14 motion-safe:animate-float" viewBox="0 0 100 100" fill="none" style={{ animationDelay: '0.4s' }}>
+              <path d="M50 5 L90 30 L90 70 L50 95 L10 70 L10 30 Z" stroke="white" strokeOpacity="0.35" strokeWidth="3" />
+            </svg>
+          </div>
           {!imageError ? (
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-40 lg:h-40">
+            <div className="relative z-10 w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-40 lg:h-40">
               <Image
                 src={member.image}
                 alt={`${member.name} - ${member.role}`}

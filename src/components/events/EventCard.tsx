@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -36,15 +37,16 @@ export function EventCard({ event, index }: EventCardProps) {
     >
       <Card className="h-full overflow-hidden bg-white border border-neutral-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
         {/* Event Image */}
-        <div className="relative h-48 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 to-neutral-200 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-red-600/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-2xl">🎤</span>
-              </div>
-              <p className="text-sm text-neutral-500">Event Image</p>
-            </div>
-          </div>
+        <div className={`relative w-full h-48 overflow-hidden rounded-t-lg ${event.imagePadding ?? ''}`}>
+          <Image
+            src={event.image || '/events/placeholder.jpg'}
+            alt={(event as any).alt || event.title}
+            width={400}
+            height={250}
+            className={`w-full h-full ${event.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+            style={{ objectPosition: (event as any).imagePosition || 'center' }}
+            priority={index < 3}
+          />
           
           {/* Category Badge */}
           <div className="absolute top-4 left-4">

@@ -80,8 +80,8 @@ const features = [
   },
   {
     icon: Users,
-    title: 'Mentorship Program',
-    description: 'Connect with successful entrepreneurs and industry professionals for guidance, advice, and career development.',
+    title: 'Networking Events',
+    description: 'Regular socials and mixers to help students connect with like-minded peers, potential co-founders, and industry contacts.',
     color: 'from-purple-500 to-pink-500',
   },
   {
@@ -99,10 +99,8 @@ const features = [
 ]
 
 const stats = [
-  { number: '500+', label: 'Active Members', icon: Users },
-  { number: '50+', label: 'Events Per Year', icon: Calendar },
-  { number: '25+', label: 'Partner Companies', icon: TrendingUp },
-  { number: '15+', label: 'Successful Startups', icon: Award },
+  { number: '100+', label: 'Members', icon: Users },
+  { number: '20+', label: 'Events Per Year', icon: Calendar },
 ]
 
 export default function HomePage() {
@@ -243,7 +241,7 @@ export default function HomePage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-2 lg:grid-cols-2 gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
