@@ -41,35 +41,6 @@ const heroVariants = {
   },
 }
 
-const upcomingEvents = [
-  {
-    id: '1',
-    title: 'Startup Pitch Competition 2024',
-    date: '2024-12-15',
-    time: '18:00',
-    location: 'Bristol Business School',
-    category: 'Competition',
-    description: 'Annual startup pitch competition where student entrepreneurs showcase their innovative ideas.',
-  },
-  {
-    id: '2',
-    title: 'Tech Entrepreneurs Networking',
-    date: '2024-12-20',
-    time: '19:00',
-    location: 'The Berkeley Square',
-    category: 'Networking',
-    description: 'Evening networking with successful tech entrepreneurs from Bristol\'s startup ecosystem.',
-  },
-  {
-    id: '3',
-    title: 'Business Model Canvas Workshop',
-    date: '2024-12-10',
-    time: '14:00',
-    location: 'Innovation Lab',
-    category: 'Workshop',
-    description: 'Learn to create and validate your business model using proven frameworks.',
-  },
-]
 
 const features = [
   {
@@ -378,90 +349,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <motion.div variants={itemVariants}>
-              <Badge variant="secondary" className="mb-4">Upcoming Events</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-                Don't Miss Out on Our{' '}
-                <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Exciting Events
-                </span>
-              </h2>
-              <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-                Join us for workshops, networking sessions, and competitions designed to accelerate your entrepreneurial journey.
-              </p>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
-          >
-            {upcomingEvents.map((event, index) => (
-              <motion.div key={event.id} variants={itemVariants}>
-                <Card className="h-full group">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge variant="outline">{event.category}</Badge>
-                      <div className="text-sm text-neutral-500">
-                        {new Date(event.date).toLocaleDateString('en-GB', { 
-                          month: 'short', 
-                          day: 'numeric' 
-                        })}
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg font-bold text-neutral-900 group-hover:text-primary transition-colors">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-neutral-600 mb-4 leading-relaxed">
-                      {event.description}
-                    </CardDescription>
-                    <div className="space-y-2 text-sm text-neutral-500">
-                      <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-2" />
-                        {event.time}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        {event.location}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Button asChild size="lg" variant="gradient">
-              <Link href="/events">
-                View All Events
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 relative overflow-hidden">

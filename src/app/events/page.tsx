@@ -258,6 +258,28 @@ export default function EventsPage() {
             ))}
           </motion.div>
 
+          {/* Instagram Note */}
+          <motion.div
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-sm text-neutral-500">
+              Check out our Instagram{' '}
+              <a
+                href="https://www.instagram.com/bristolentrepreneurs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-red-600 transition-colors font-medium"
+              >
+                @bristolentrepreneurs
+              </a>{' '}
+              for the most up-to-date information on events.
+            </p>
+          </motion.div>
+
           {upcomingEvents.length === 0 && (
             <motion.div
               variants={itemVariants}
