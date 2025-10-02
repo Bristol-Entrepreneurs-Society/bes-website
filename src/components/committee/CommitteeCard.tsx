@@ -52,7 +52,7 @@ export function CommitteeCard({ member, index }: CommitteeCardProps) {
               <path d="M50 8 L86 30 L86 70 L50 92 L14 70 L14 30 Z" stroke="#E63946" strokeOpacity="0.1" strokeWidth="2" />
             </svg>
           </div>
-          {!imageError ? (
+          {!imageError && member.image ? (
             <div className="relative z-10 w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-40 lg:h-40">
               <Image
                 src={member.image}
