@@ -38,8 +38,6 @@ jobs:
             reactStrictMode: true,
             output: 'export',
             trailingSlash: true,
-            basePath: '/bes-website',
-            assetPrefix: '/bes-website/',
             images: {
               unoptimized: true
             }
