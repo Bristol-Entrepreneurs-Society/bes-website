@@ -68,34 +68,26 @@ export function ContactForm() {
     
     if (!validateForm()) return
 
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
+    // Create mailto link with form data
+    const subject = `BES Contact Form: ${formData.reason}`
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Company/Role: ${formData.company || 'Not specified'}
+Reason: ${formData.reason}
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+Message:
+${formData.message}`
 
-      if (response.ok) {
-        setSubmitStatus('success')
-        setStatusMessage('Thank you for your message! We\'ll get back to you soon.')
-        setFormData({ name: '', email: '', company: '', message: '', reason: '' })
-        setErrors({})
-      } else {
-        const errorData = await response.json()
-        setSubmitStatus('error')
-        setStatusMessage(errorData.message || 'Something went wrong. Please try again.')
-      }
-    } catch (error) {
-      setSubmitStatus('error')
-      setStatusMessage('Network error. Please check your connection and try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
+    const mailtoLink = `mailto:contact@bristolentrepreneurs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    
+    // Open email client
+    window.location.href = mailtoLink
+    
+    // Show success message
+    setSubmitStatus('success')
+    setStatusMessage('Your email client should open now. If not, please email us directly at contact@bristolentrepreneurs.com')
+    setFormData({ name: '', email: '', company: '', message: '', reason: '' })
+    setErrors({})
   }
 
   const handleInputChange = (field: keyof FormData, value: string) => {
